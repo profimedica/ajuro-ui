@@ -7,11 +7,11 @@ A small library that adds commas to numbers
 
 ## Installation
 
-  `npm install @ajuro/ajuro-ui`
+  `npm install @profimedica/ajuro-ui`
 
 ## Usage
 
-    var numFormatter = require('@ajuro/ajuro-ui');
+    var numFormatter = require('@profimedica/ajuro-ui');
 
     var formattedNum = numFormatter(35666);
   
