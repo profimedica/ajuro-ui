@@ -1,0 +1,31 @@
+{
+  "name": "ajuro-ui",
+  "version": "0.1.0",
+  "homepage": "http://www.aju.ro/",
+  "authors": [
+    "Florin Cumpanasu <startflorin@gmail.com>"
+  ],
+  "description": "Advanced Controls Library with demo on www.aju.ro",
+  "main": [
+    "./main.js"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "advanced",
+    "controls",
+    "library"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
