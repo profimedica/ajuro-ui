@@ -1,0 +1,85 @@
+
+aj-style = "blue"
+aj-root-font-family = Calibri, "Segoe UI", Thonburi, Arial, Verdana, sans-serif
+aj-root-font-size = 10pt
+
+aj-scrollbar-background = inherit
+aj-scrollbar-thumb = inherit
+
+aj-border-1 = 1px solid #9bc2e6
+
+aj-border-color-1 = #000
+aj-border-color-2 = #808080
+
+aj-background-1 = #f6f6f6
+
+aj-foreground-1 = #222
+
+aj-header-foreground-1 = #fff
+
+aj-separator-color = #d3d3d3
+
+aj-cell-focused-border = 2px solid #217346
+aj-cell-no-focus-border-top = 2px solid transparent
+aj-cell-no-focus-border-bottom = 1px dotted #9bc2e6
+aj-cell-ltr-no-focus-border-right = 1px dotted #9bc2e6
+aj-cell-ltr-no-focus-border-left = 2px solid transparent
+aj-cell-rtl-no-focus-border-right = 2px solid transparent
+aj-cell-rtl-no-focus-border-left = 1px dotted #9bc2e6
+
+aj-cell-highlight-border = 1px solid darkgreen
+
+aj-cell-padding = 2px
+
+aj-row-selected-background-color = #c7c7c7
+aj-row-odd-background-color = #DDEBF7
+aj-row-even-background-color = #fff
+aj-row-floating-background-color = #f0f0f0
+aj-row-stub-background-color = #f0f0f0
+
+aj-value-change-delta-up-color = darkgreen
+aj-value-change-delta-down-color = darkred
+aj-value-change-value-highlight-background-color = #cec
+
+aj-range-selected-color-1 = rgba(120,120,120,0.4)
+aj-range-selected-color-2 = rgba(80,80,80,0.4)
+aj-range-selected-color-3 = rgba(40,40,40,0.4)
+aj-range-selected-color-4 = rgba(0,0,0,0.4)
+
+aj-header-background-1 = #5B9BD5
+aj-header-select-padding = 5px 0px 0px 3px
+
+aj-button-background-1 = #ddebf7
+aj-button-foreground-1 = #000
+aj-button-border-1 = #808080
+
+aj-header-font-weight = 600
+
+aj-tab-border = 1px solid #d3d3d3
+aj-tab-background = #5B9BD5
+aj-tab-selected-background = #9bc2e6
+aj-tab-padding = 6px 8px 6px 8px
+
+aj-menu-option-active-color = #c7c7c7
+
+aj-select-background = white
+aj-select-foreground = #222
+
+aj-menu-option-padding = 2px 4px 2px 4px
+aj-menu-option-shortcut-padding = 2px 2px 2px 2px
+
+@import "theme-common"
+
+
+.aj-blue
+  .aj-floating-filter-button
+    background-color aj-select-background
+    color aj-foreground-1
+
+  .aj-floating-filter-body
+    input
+      background-color aj-select-background
+      color aj-foreground-1
+
+//stick in an override
+//.aj-common

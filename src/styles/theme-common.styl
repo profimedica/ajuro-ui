@@ -1,0 +1,495 @@
+/*
+todo
+- loading overlay colors
+- rich select colors
+
+*/
+
+
+@import 'nib'
+
+.aj-{aj-style}
+  // copying bootstrap with line-height, sorts out alignment problems with images beside text
+  line-height 1.4
+  font-family aj-root-font-family
+  font-size aj-root-font-size
+  color aj-foreground-1
+  // changing the image is same as what bootstrap does, without the images didn't align right
+  img
+    vertical-align middle
+    border 0
+
+  .aj-root
+    border aj-border-1
+
+  .aj-cell-data-changed
+    background-color aj-value-change-value-highlight-background-color
+
+  .aj-cell-data-changed-animation
+    background-color transparent
+    transition background-color 1s
+
+  .aj-cell {}
+
+  .aj-cell-not-inline-editing
+    padding: aj-cell-padding;
+
+  // we do not want to color the range color when the cell is also focused
+  .aj-cell-range-selected-1:not(.aj-cell-focus)
+    background-color aj-range-selected-color-1
+
+  .aj-cell-range-selected-2:not(.aj-cell-focus)
+    background-color aj-range-selected-color-2
+
+  .aj-cell-range-selected-3:not(.aj-cell-focus)
+    background-color aj-range-selected-color-3
+
+  .aj-cell-range-selected-4:not(.aj-cell-focus)
+    background-color aj-range-selected-color-4
+
+  .aj-cell-focus
+    border aj-cell-focused-border
+
+  .aj-cell-no-focus
+    border-top aj-cell-no-focus-border-top
+    border-bottom aj-cell-no-focus-border-bottom
+
+  .aj-ltr .aj-cell-no-focus
+    border-right aj-cell-ltr-no-focus-border-right
+    border-left aj-cell-ltr-no-focus-border-left
+
+  .aj-rtl .aj-cell-no-focus
+    border-right aj-cell-rtl-no-focus-border-right
+    border-left aj-cell-rtl-no-focus-border-left
+
+  // we use rtl and ltr below, even though it's the same style, so it propertly
+  .aj-rtl .aj-cell-first-right-pinned
+    border-left aj-border-1
+  .aj-ltr .aj-cell-first-right-pinned
+    border-left aj-border-1
+
+  .aj-rtl .aj-cell-last-left-pinned
+    border-right aj-border-1
+  .aj-ltr .aj-cell-last-left-pinned
+    border-right aj-border-1
+
+  // this needs to be after the other cell items, so the boarder gets preference
+  .aj-cell-highlight
+    border aj-cell-highlight-border
+
+  .aj-cell-highlight-animation
+    transition border 1s
+
+  // used by the animateShowChangedCellRenderer
+  .aj-value-change-delta
+    padding-right 2px
+  .aj-value-change-delta-up
+    color aj-value-change-delta-up-color
+  .aj-value-change-delta-down
+    color aj-value-change-delta-down-color
+  .aj-value-change-value
+    background-color transparent
+    border-radius 1px
+    padding-left 1px
+    padding-right 1px
+    transition background-color 1s
+  .aj-value-change-value-highlight
+    background-color aj-value-change-value-highlight-background-color
+    transition background-color 0.1s
+
+  .aj-rich-select
+    font-size 14px
+    border aj-border-1
+    background-color aj-select-background
+
+  .aj-rich-select-value
+    padding 2px
+
+  .aj-rich-select-list
+    border-top 1px solid aj-separator-color
+
+  .aj-rich-select-row
+    padding 2px
+
+  .aj-rich-select-row-selected
+    background-color aj-menu-option-active-color
+
+  .aj-large-text
+    border aj-border-1
+
+  .aj-large-textarea {}
+
+  // HEADER SECTION
+  .aj-header-select-all
+    padding aj-header-select-padding
+    line-height 0
+
+  .aj-header
+    color aj-header-foreground-1
+    background aj-header-background-1
+    border-bottom aj-border-1
+    font-weight aj-header-font-weight
+
+  .aj-header-icon
+    color aj-header-foreground-1
+    stroke none
+    fill aj-header-foreground-1
+
+  .aj-layout-for-print .aj-header-container
+    background aj-header-background-1
+    border-bottom aj-border-1
+
+  .aj-ltr .aj-header-cell
+    border-right aj-border-1
+
+  .aj-rtl .aj-header-cell
+    border-left aj-border-1
+
+  .aj-header-cell-moving .aj-header-cell-label
+    opacity 0.5
+
+  .aj-header-cell-moving
+    background-color rgb(190,190,190);
+
+  .aj-ltr .aj-header-group-cell
+    border-right aj-border-1
+
+  .aj-rtl .aj-header-group-cell
+    border-left aj-border-1
+
+  .aj-header-group-cell-with-group
+    border-bottom aj-border-1
+
+  .aj-header-cell-label
+    padding 4px 2px 4px 2px
+
+  .aj-header-cell-text
+    padding-left 2px
+
+  .aj-header-group-cell-label
+    padding 4px
+
+  .aj-ltr .aj-header-group-cell-label
+    padding-left 10px
+
+  .aj-rtl .aj-header-group-cell-label
+    padding-right 10px
+
+  .aj-rtl .aj-header-group-text
+    margin-left 2px
+
+  .aj-ltr .aj-header-group-text
+    margin-right 2px
+
+  .aj-header-cell-menu-button
+    padding 2px
+    margin-top 4px
+    margin-left 1px
+    margin-right 1px
+    border 1px solid transparent
+    border-radius 3px
+    box-sizing content-box /* When using bootstrap, box-sizing was set to 'border-box' */
+    line-height 0px /* normal line height, a space was appearing below the menu button */
+
+  .aj-ltr .aj-pinned-right-header
+    border-left aj-border-1
+
+  .aj-rtl .aj-pinned-left-header
+    border-right aj-border-1
+
+  .aj-header-cell-menu-button:hover
+    border aj-border-1
+
+  .aj-body
+    background-color aj-background-1
+
+  .aj-row-odd
+    background-color aj-row-odd-background-color
+
+  .aj-row-even
+    background-color aj-row-even-background-color
+
+  .aj-row-selected
+    background-color aj-row-selected-background-color
+
+  .aj-row-stub
+    background-color aj-row-stub-background-color
+
+  .aj-stub-cell
+    padding 2px 2px 2px 10px
+
+  .aj-floating-top
+    background-color aj-row-floating-background-color
+
+  .aj-floating-top
+    .aj-row
+      background-color aj-row-floating-background-color
+
+  .aj-floating-bottom
+      background-color aj-row-floating-background-color
+
+  .aj-floating-bottom
+    .aj-row
+      background-color aj-row-floating-background-color
+
+  .aj-overlay-loading-wrapper
+    background-color rgba(255, 255, 255, 0.5)
+
+  .aj-overlay-loading-center
+    background-color #ffffff
+    border aj-border-1
+    border-radius 10px
+    padding 10px
+    color black
+
+  .aj-overlay-no-rows-center
+    background-color #ffffff
+    border aj-border-1
+    border-radius 10px
+    padding 10px
+
+  .aj-group-cell-entire-row
+    background-color aj-background-1
+    padding aj-cell-padding
+
+  .aj-footer-cell-entire-row
+    background-color aj-background-1
+    padding aj-cell-padding
+
+  .aj-group-cell
+    font-style italic
+
+  .aj-ltr .aj-group-expanded
+    padding-right 4px
+
+  .aj-rtl .aj-group-expanded
+    padding-left 4px
+
+  .aj-ltr .aj-group-contracted
+    padding-right 4px
+
+  .aj-rtl .aj-group-contracted
+    padding-left 4px
+
+  .aj-ltr .aj-group-loading
+    padding-right 4px
+
+  .aj-rtl .aj-group-loading
+    padding-left 4px
+
+  .aj-ltr .aj-group-value
+    padding-right 2px
+
+  .aj-rtl .aj-group-value
+    padding-left 2px
+
+  .aj-ltr .aj-group-checkbox
+    padding-right 2px
+
+  .aj-rtl .aj-group-checkbox
+    padding-left 2px
+
+  .aj-group-child-count
+    display inline-block
+
+  .aj-footer-cell
+    font-style italic
+
+  .aj-menu
+    border aj-border-color-2
+    background-color aj-background-1
+    //color aj-foreground-1
+    cursor default
+    font-family aj-root-font-family
+    font-size aj-root-font-size
+
+    .aj-tab-header
+      background-color: aj-tab-background
+
+    .aj-tab
+      padding aj-tab-padding
+      margin 2px 2px 0px 2px
+      display inline-block
+      border-right 1px solid transparent
+      border-left 1px solid transparent
+      border-top 1px solid transparent
+      border-top-right-radius 2px
+      border-top-left-radius 2px
+      // need to specify color and stroke again here because
+      // for blue, the tab header is different to the grid header
+
+    .aj-tab-selected
+      background-color aj-tab-selected-background
+      border-right aj-tab-border
+      border-left aj-tab-border
+      border-top aj-tab-border
+
+  .aj-menu-separator
+    border-top 1px solid aj-separator-color
+
+  .aj-menu-option {}
+
+  .aj-menu-option-active
+    background-color aj-menu-option-active-color
+
+  .aj-menu-option-icon
+    padding aj-menu-option-padding
+    vertical-align middle
+
+  .aj-menu-option-text
+    padding aj-menu-option-padding
+    vertical-align middle
+
+  .aj-menu-option-shortcut
+    padding aj-menu-option-shortcut-padding
+    vertical-align middle
+
+  .aj-menu-option-popup-pointer
+    padding aj-menu-option-padding
+    vertical-align middle
+
+  .aj-menu-option-disabled
+    opacity 0.5
+
+  .aj-menu-column-select-wrapper
+    margin 2px
+
+  .aj-filter-checkbox
+    position relative
+    left 2px
+    display inline-block
+    margin-right 5px
+
+  .aj-filter-header-container
+    border-bottom 1px solid aj-separator-color
+
+  .aj-filter-apply-panel
+    border-top 1px solid aj-separator-color
+    padding 2px
+
+  .aj-filter-value
+    margin-left 4px
+
+  .aj-ltr .aj-selection-checkbox
+    padding-right 4px
+
+  .aj-rtl .aj-selection-checkbox
+    padding-left 4px
+
+  .aj-paging-panel
+    padding 4px
+
+  .aj-paging-button
+    margin-left 4px
+    margin-right 4px
+
+  .aj-paging-row-summary-panel
+    display inline-block
+    width 300px
+
+  .aj-tool-panel
+    background-color aj-background-1
+    border-bottom aj-border-1
+    border-top aj-border-1
+    color aj-foreground-1
+
+  .ltr .aj-tool-panel
+    border-right aj-border-1
+
+  .rtl .aj-tool-panel
+    border-left aj-border-1
+
+  .aj-status-bar
+    color aj-foreground-1
+    background-color aj-background-1
+    font-size aj-root-font-size
+    height 22px
+    border-bottom aj-border-1
+    border-left aj-border-1
+    border-right aj-border-1
+    padding 2px
+
+  .aj-status-bar-aggregations
+    float right
+
+  .aj-status-bar-item
+    padding-left 10px
+
+  .aj-column-drop-cell
+    background aj-button-background-1
+    color aj-button-foreground-1
+    border aj-button-border-1
+
+  .aj-column-drop-cell-ghost
+    opacity 0.5
+
+  .aj-column-drop-cell-text
+    padding-left 2px
+    padding-right 2px
+
+  .aj-column-drop-cell-button
+    border 1px solid transparent
+    padding-left 2px
+    padding-right 2px
+    border-radius 3px
+
+  .aj-column-drop-cell-button:hover
+    border aj-border-1
+
+  .aj-column-drop-empty-message
+    padding-left 2px
+    padding-right 2px
+    color grey
+
+  .aj-column-drop-icon
+    margin 3px
+
+  .aj-column-drop
+    background-color aj-background-1
+
+  /* this is for the rowGroupPanel, that appears along the top of the grid */
+  .aj-column-drop-horizontal
+    padding 2px
+    border-top aj-border-1
+    border-left aj-border-1
+    border-right aj-border-1
+
+    //.aj-column-drop-cell
+    //  padding 2px
+
+  /* this is for the column drops that appear in the toolPanel */
+  .aj-column-drop-vertical
+    padding 4px 4px 10px 4px
+    border-bottom aj-border-1
+    overflow auto
+
+    .aj-column-drop-cell
+      margin-top 2px
+
+    .aj-column-drop-empty-message
+      text-align center
+      padding 5px
+
+  .aj-pivot-mode
+    border-bottom aj-border-1
+    padding 4px
+    background-color aj-background-1
+
+  .aj-tool-panel
+    .aj-column-select-panel
+      border-bottom aj-border-1
+      overflow auto
+
+  .aj-select-agg-func-popup
+    cursor default
+    position absolute
+    font-size 14px
+    background-color aj-select-background
+    border aj-border-1
+
+  .aj-select-agg-func-item
+    padding-left 2px
+    padding-right 2px
+
+  .aj-select-agg-func-item:hover
+    background-color aj-menu-option-active-color

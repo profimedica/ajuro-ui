@@ -1,0 +1,106 @@
+
+aj-style = "dark"
+aj-root-font-family = "Helvetica Neue",Helvetica,Arial,sans-serif
+aj-root-font-size = 14px
+
+aj-scrollbar-background = #302E2E
+aj-scrollbar-thumb = #626262
+
+aj-border-1 = 1px solid grey
+
+aj-border-color-1 = #000
+aj-border-color-2 = #555
+
+aj-background-1 = #302E2E
+
+aj-foreground-1 = #ccc
+
+aj-header-foreground-1 = #e0e0e0
+
+aj-separator-color = #555
+
+aj-cell-focused-border = 1px solid darkgrey
+aj-cell-no-focus-border-top = 1px solid transparent
+aj-cell-no-focus-border-bottom = 1px solid transparent
+aj-cell-ltr-no-focus-border-right = 1px dotted grey
+aj-cell-ltr-no-focus-border-left = 1px solid transparent
+aj-cell-rtl-no-focus-border-right = 1px solid transparent
+aj-cell-rtl-no-focus-border-left = 1px dotted grey
+
+aj-cell-highlight-border = 1px solid lightgreen
+
+aj-cell-padding = 2px
+
+aj-row-selected-background-color = #4A708B
+aj-row-odd-background-color = #302E2E
+aj-row-even-background-color = #403E3E
+aj-row-floating-background-color = #333
+aj-row-stub-background-color = #333
+
+aj-value-change-delta-up-color = greenyellow
+aj-value-change-delta-down-color = red
+aj-value-change-value-highlight-background-color = chocolate
+
+aj-range-selected-color-1 = rgba(100,160,160,0.4)
+aj-range-selected-color-2 = rgba(100,190,190,0.4)
+aj-range-selected-color-3 = rgba(100,220,220,0.4)
+aj-range-selected-color-4 = rgba(100,250,250,0.4)
+
+aj-header-background-1 = #626262
+aj-header-select-padding = 5px 0px 0px 3px
+
+aj-button-background-1 = #403E3E
+aj-button-foreground-1 = #e0e0e0
+aj-button-border-1 = #666
+
+aj-header-font-weight = normal
+
+aj-tab-border = 1px solid #555
+aj-tab-background = #626262
+aj-tab-selected-background = #302E2E
+aj-tab-padding = 6px 8px 6px 8px
+
+aj-menu-option-active-color = #4A708B
+
+aj-select-background = #302E2E
+aj-select-foreground = #ccc
+
+aj-menu-option-padding = 2px 4px 2px 4px
+aj-menu-option-shortcut-padding = 2px 2px 2px 2px
+
+@import "theme-common"
+
+// custom css for dark, we want to change the scrollbars
+
+.aj-dark
+
+  ::-webkit-scrollbar
+    width 12px
+    height 12px
+    background #302E2E
+
+    &-thumb
+      background-color #626262
+
+  ::-webkit-scrollbar-corner
+    background #302E2E
+
+  select
+    background-color aj-select-background
+    color aj-foreground-1
+
+  input
+    background-color aj-select-background
+    color aj-foreground-1
+
+  .aj-floating-filter-button
+      background-color aj-select-background
+      color aj-foreground-1
+
+  .aj-floating-filter-body
+    input
+      background-color aj-select-background
+      color aj-foreground-1
+
+//stick in an override
+//.aj-common

@@ -4,7 +4,7 @@ Object.keys(ajuroUI).forEach(function(key) {
     exports[key] = ajuroUI[key];
 });
 
-require('./dist/styles/ajuro-ui.css');
+require('./dist/styles/ajuro.css');
 require('./dist/styles/theme-blue.css');
 require('./dist/styles/theme-dark.css');
 require('./dist/styles/theme-fresh.css');

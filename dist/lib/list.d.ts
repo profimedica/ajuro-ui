@@ -1,7 +1,6 @@
 // Type definitions for ajuro-ui v0.1.0
 // Project: http://www.aju.ro/
 // Definitions by: Niall Crosby <https://github.com/profimedica/>
-import { ListOptions } from "./entities/gridOptions";
 import { IFrameworkFactory } from "./interfaces/iFrameworkFactory";
 export interface ListParams {
     globalEventListener?: Function;
